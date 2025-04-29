@@ -16,7 +16,7 @@ import seaborn as sns
 
 def pretty_model_summary(model):
     layers = []
-    units = 0
+    units = 12
     
     for layer in model.layers:
         if (layer.__class__.__name__ == 'Dense'):
