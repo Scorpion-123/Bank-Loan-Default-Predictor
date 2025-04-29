@@ -20,7 +20,7 @@ def pretty_model_summary(model):
         layers.append({
             "Name": layer.name,
             "Type": layer.__class__.__name__,
-            "Output Shape": str(layer.output_shape),
+            # "Output Shape": str(layer.output_shape),
             "Param #": layer.count_params()
         })
 
