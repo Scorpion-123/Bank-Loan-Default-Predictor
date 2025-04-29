@@ -16,11 +16,16 @@ import seaborn as sns
 
 def pretty_model_summary(model):
     layers = []
+    units = 0
+    
     for layer in model.layers:
+        if (layer.__class__.__name__ == 'Dense'):
+            units = layer.units
+        
         layers.append({
             "Name": layer.name,
             "Type": layer.__class__.__name__,
-            # "Output Shape": (None, layer.units),
+            "Output Shape": (None, units),
             "Param #": layer.count_params()
         })
 
