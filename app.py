@@ -51,19 +51,19 @@ def load_data():
 
 
 def load_advanced_mlp():
-    model = load_model('bank_loan_default_adv_mlp', safe_mode=False)
+    model = load_model('bank_loan_default_adv_mlp.keras', safe_mode=False)
     model.summary()
     return model
 
 
 def load_basic_ann():
-    model = load_model('bank_loan_default_ann', safe_mode=False)
+    model = load_model('bank_loan_default_ann.keras', safe_mode=False)
     model.summary()
     return model
 
 
 def load_residual_mlp():
-    model = load_model('bank_loan_default_res_mlp', safe_mode=False)
+    model = load_model('bank_loan_default_res_mlp.keras', safe_mode=False)
     model.summary()
     return model
 
